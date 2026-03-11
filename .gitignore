@@ -1,7 +1,13 @@
 # NetBeans
-/nbproject/private/
-/build/
-/dist/
+nbproject/private/
+nb-configuration.xml
+
+# Build output
+build/
+dist/
+
+# Credentials - never commit this
+src/config.properties
 
 # Compiled files
 *.class
@@ -9,6 +15,6 @@
 # Logs
 *.log
 
-# OS files
+# OS junk
 .DS_Store
 Thumbs.db

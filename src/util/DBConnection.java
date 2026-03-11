@@ -4,6 +4,7 @@
  */
 package util;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,10 +15,21 @@ import java.util.Properties;
  * @author jesse
  */
 public class DBConnection {
-   private static final String URL= "jdbc:mysql://127.0.0.1:3306/student_management";
-   private static final String USER= "root";
+   private static final String URL;
+   private static final String USER;
+   private static final String PASSWORD;
    
-   //private static Connection connection;
+   static{
+       try(InputStream input= DBConnection.class.getClassLoader().getResourceAsStream("config.properties")){
+           Properties props= new Properties();
+           props.load(input);
+           URL= props.getProperty("db.url");
+           USER= props.getProperty("db.user");
+           PASSWORD= props.getProperty("db.password");
+       }catch(Exception e){
+           throw new RuntimeException("MYSQL driver not found", e);
+       }
+   }
    
    //get a connection(singleton)
    public static Connection getConnection()throws SQLException{
@@ -27,6 +39,7 @@ public class DBConnection {
                
                Properties props= new Properties();
                props.setProperty("user", USER);
+               props.setProperty("password", PASSWORD);
                props.setProperty("useSSL", "false");
                props.setProperty("serverTimezone", "UTC");
                
