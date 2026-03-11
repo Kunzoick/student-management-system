@@ -203,6 +203,6 @@ The progression from this system to the Trust-Aware Incident API shows what chan
 
 ---
 ## Further Reading
-for more indepth view and undersatnding read the Documentation -> [docs/SMS_Architecture_Decision_Document.docx]
+for more indepth view and undersatnding read the Documentation -> [https://github.com/Kunzoick/student-management-system/blob/master/docs/SMS_Architecture_Decision_Document.docx]
 
 *Student Management System · v3.1 · December 2025*
