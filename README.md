@@ -202,5 +202,7 @@ Building production-minded software without hiding behind framework abstractions
 The progression from this system to the Trust-Aware Incident API shows what changes when the deployment target changes from a desktop to a distributed API: the layering stays, the transaction thinking stays, the security discipline stays. The framework arrives only after the fundamentals are solid.
 
 ---
+## Further Reading
+for more indepth view and undersatnding read the Documentation -> [docs/SMS_Architecture_Decision_Document.docx]
 
 *Student Management System · v3.1 · December 2025*
